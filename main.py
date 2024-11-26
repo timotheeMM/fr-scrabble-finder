@@ -19,4 +19,6 @@ def filter_words(input_file, output_file, letters):
     with open(output_file, 'w', encoding='utf-8') as file:
         file.write(' '.join(all_valid_words))
 
-filter_words('./words.txt', 'output.txt', list('test'))
+if __name__ == "__main__":
+    letters = input("Quelles lettres avez-vous dans votre jeu ? ")
+    filter_words('./words.txt', './output.txt', list(letters))
