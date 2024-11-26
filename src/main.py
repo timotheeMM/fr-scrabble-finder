@@ -1,3 +1,42 @@
+values = {
+    "a": 1,
+    "b": 3,
+    "c": 3,
+    "d": 2,
+    "e": 1,
+    "f": 4,
+    "g": 2,
+    "h": 4,
+    "i": 1,
+    "j": 8,
+    "k": 10,
+    "l": 1,
+    "m": 2,
+    "n": 1,
+    "o": 1,
+    "p": 3,
+    "q": 8,
+    "r": 1,
+    "s": 1,
+    "t": 1,
+    "u": 1,
+    "v": 4,
+    "w": 10,
+    "x": 10,
+    "y": 10,
+    "z": 10
+}
+
+# Exemple d'utilisation
+lettre = "e"
+valeur = values.get(lettre, None)
+
+if valeur is not None:
+    print(f"La lettre '{lettre}' a une valeur de {valeur} au Scrabble.")
+else:
+    print(f"La lettre '{lettre}' n'a pas de valeur attribuée.")
+
+
 def word_available(word, letters):
     available_letters = letters.copy()
 
