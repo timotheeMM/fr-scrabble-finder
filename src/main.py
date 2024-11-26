@@ -36,6 +36,13 @@ if valeur is not None:
 else:
     print(f"La lettre '{lettre}' n'a pas de valeur attribuée.")
 
+def word_value(word):
+    value = 0
+
+    for char in word:
+        value += values.get(char, None)
+
+    return value
 
 def word_available(word, letters):
     available_letters = letters.copy()
