@@ -27,14 +27,9 @@ values = {
     "z": 10
 }
 
-# Exemple d'utilisation
-lettre = "e"
-valeur = values.get(lettre, None)
-
-if valeur is not None:
-    print(f"La lettre '{lettre}' a une valeur de {valeur} au Scrabble.")
-else:
-    print(f"La lettre '{lettre}' n'a pas de valeur attribuée.")
+# use case
+test_letter = "e"
+test_value = values.get(test_letter, None)
 
 def word_value(word):
     value = 0
