@@ -57,6 +57,8 @@ def filter_words(input_file, output_file, letters):
 
     all_valid_words = [word for word in words if word_available(word, letters)]
 
+    all_valid_words.sort(key=word_value, reverse=True)
+
     with open(output_file, 'w', encoding='utf-8') as file:
         file.write(' '.join(all_valid_words))
 
