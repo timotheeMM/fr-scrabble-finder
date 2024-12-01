@@ -19,7 +19,7 @@ def word_available(word, letters):
             return False
     return True
 
-def filter_words(input_file, output_file, letters):
+def filter_words(input_file, letters):
     with open(input_file, 'r', encoding='utf-8') as file:
         content = file.read()
     
@@ -29,9 +29,8 @@ def filter_words(input_file, output_file, letters):
 
     all_valid_words.sort(key=word_value, reverse=True)
 
-    with open(output_file, 'w', encoding='utf-8') as file:
-        file.write(' '.join(all_valid_words))
+    return all_valid_words[0] if len(all_valid_words) != 0 else None
 
 if __name__ == "__main__":
     letters = input("Quelles lettres avez-vous dans votre jeu ? ")
-    filter_words('./words.txt', './output.txt', list(letters))
+    print(filter_words('./words.txt', list(letters)))
